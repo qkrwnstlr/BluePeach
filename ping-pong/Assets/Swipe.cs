@@ -25,11 +25,11 @@ public class Swipe : MonoBehaviour
             Reset();
         }
         #endregion
-        // swipeDelta=Vector2.zero;
-        // if(isDragging)
-        // {
+        swipeDelta=Vector2.zero;
+        if(isDragging)
+        {
             
-        // }
+        }
     }
 
     private void Reset()
