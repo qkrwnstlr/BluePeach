@@ -36,6 +36,11 @@ public class Swipe : MonoBehaviour
     {
         startTouch =swipeDelta =Vector2.zero;
     }
+
+    private void LateUpdate(){
+        transfrom.position = Vector2.zero;
+    }
+    
    public Vector2 SwipeDelta { get { return swipeDelta; }}
    public bool SwipeLeft { get { return swipeLeft; }}
    public bool SwipeRight { get { return swipeRight; }}
