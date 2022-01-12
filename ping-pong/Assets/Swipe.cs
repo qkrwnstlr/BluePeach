@@ -25,17 +25,23 @@ public class Swipe : MonoBehaviour
             Reset();
         }
         #endregion
-        // swipeDelta=Vector2.zero;
-        // if(isDragging)
-        // {
+        swipeDelta=Vector2.zero;
+        if(isDragging)
+        {
             
-        // }
+        }
     }
 
     private void Reset()
     {
         startTouch =swipeDelta =Vector2.zero;
     }
+
+    private void LateUpdate(){
+        transfrom.position = Vector2.zero;
+        Log.debug("hello world");
+    }
+    
    public Vector2 SwipeDelta { get { return swipeDelta; }}
    public bool SwipeLeft { get { return swipeLeft; }}
    public bool SwipeRight { get { return swipeRight; }}
