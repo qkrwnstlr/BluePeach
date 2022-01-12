@@ -11,25 +11,25 @@ public class Swipe : MonoBehaviour
     {
         tap=swipeLeft=swipeRight=swipeUp=swipeDown=false;
 
-        // #region Moblie Inputs
-        // if(Input.touches.Length>0)
-        // {
-        //     if(Input.touches[0].phase==TouchPhase.Began)
-        //     {
-        //         tap=true;
-        //         startTouch=Input.touches[0].position;
-        //     }
-        // }
-        // else if(Input.touches[0].phase==TouchPhase.Ended || Input.touches[0].phase==TouchPhase.Canceled)
-        // {
-        //     Reset();
-        // }
-        // #endregion
-        swipeDelta=Vector2.zero;
-        if(isDragging)
+        #region Moblie Inputs
+        if(Input.touches.Length>0)
         {
-            
+            if(Input.touches[0].phase==TouchPhase.Began)
+            {
+                tap=true;
+                startTouch=Input.touches[0].position;
+            }
         }
+        else if(Input.touches[0].phase==TouchPhase.Ended || Input.touches[0].phase==TouchPhase.Canceled)
+        {
+            Reset();
+        }
+        #endregion
+        // swipeDelta=Vector2.zero;
+        // if(isDragging)
+        // {
+            
+        // }
     }
 
     private void Reset()
