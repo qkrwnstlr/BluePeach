@@ -39,6 +39,7 @@ public class Swipe : MonoBehaviour
 
     private void LateUpdate(){
         transfrom.position = Vector2.zero;
+        Log.debug("hello world");
     }
     
    public Vector2 SwipeDelta { get { return swipeDelta; }}
